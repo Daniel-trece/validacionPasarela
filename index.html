@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Validación en tiempo real</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Formulario de Pago</h1>
+        <!--
+        <div class="contenedor-tarjeta">
+            <div class="card">
+                <div class="contenedores">
+                    <div class="chip">
+                        <div class="chip1"></div>
+                        <div class="chip2"></div>
+                        <div class="chip3"> </div>
+                        <div class="chip4"></div>
+                        <div class="chip5"></div>
+                        <div class="chip6"></div>
+                        <div class="chip7"></div>
+                    </div>
+                    <div class="contenedor">
+                        <div class="no_tarjeta"><input id="no_tarjeta-card" type="text"></div>
+                        <div class="nombre"><input type="nombre-card" value=""></div>
+                        <div class="contendor--mmaa-cvc"><p><b>MM/AA:</b> <input id="mm" type="text">/ <input type="text" id="aa"> </p><p><b>CVC:</b> <input type="text" id="cvc-card"></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>-->
+            <form class="formulario" id="formulario">
+                <!-- ? Solo letras mayusculas y minusculas, 15 caracteres minimo, 150 maximo-->
+                <div class="separacion nombre-div">
+                    <label for=""><i class="fa-regular fa-user" ></i> Nombre del propietario</label>
+                    <input id="nombre" type="text">
+                    <p id="p-nombre" class="text-validator">Solo se permiten mayusculas y minusculas con un máximo de 150 caracteres y como minimo 15</p>
+                </div>
+            
+                <!-- ? Validar solo numeros del 0 al 9 y 16 digitos-->
+                <div class="separacion no_targeta-div">
+                    <label for=""><i class="fa-regular fa-credit-card"></i> Numero tarjeta</label>
+                    <input type="text" id="no_tarjeta">
+                    <P id="p-no_tarjeta" class="text-validator">Solo se aceptan numeros del 0 al 9 con 16 caracteres</P>
+                </div>
+                <!-- ? Numeros del 0 al 9 y 3 digitos-->
+                <div class="separacion cvc-div">
+                    <label for=""><i class="fa-solid fa-lock"></i> CVC</label>
+                    <input type="text" id="nip">
+                    <p id="p-nip" class="text-validator">Solo se aceptan numeros del 0 al 9 y 3 caracteres</p>
+                </div>
+                <!-- ? Numeros del 0 al 9 y 2 digitos-->
+                <div class="separacion ddmm-div">
+                    <label for=""><i class="fa-regular fa-calendar"></i> Vencimiento(MM/AA)</label>
+                    <div class="ddmm">
+                        <input type="text" id="ddmm"><input type="text" id="ddmm">
+                    </div>
+                    <p id="p-ddmm" class="text-validator">Solo se aceptan numeros del 0 al 9 y dos caracteres por bloque</p>
+                </div>
+            
+                <!-- ? Minimo 8 caracteres y formato de correo usuario@dominio.com-->
+                <div class="separacion correo-div">
+                    <label for=""><i class="fa-solid fa-envelope"></i> Correo</label>
+                    <input type="text" id="correo">
+                    <p id="p-correo" class="text-validator">Solo se acepta formato de correo correo@dominio.com y un minimo de 8 caracteres</p>
+                </div>
+                <!-- ? Validar que solo acepte numeros del 0 al 9, y limitar lenth a 5 numeros-->
+                <div class="separacion monto-div">
+                    <label for=""><i class="fa-solid fa-cash-register"></i> Monto</label>
+                    <input type="text" id="monto">
+                    <p id="p-monto" class="text-validator">Solo cifras de 5 numeros</p>
+                </div>
+                <!-- ? Limitar accion de click derecho (ver codigo fuente)-->
+                <div class="separacion concepto-div">
+                    <label>Concepto</label>
+                    <input type="text" id="concepto">
+                    <p id="p-concepto" class="text-validator">Solo se permiten mayusculas y minusculas con un máximo de 150 caracteres y como minimo 15</p>
+                </div>
+                    <input type="submit" value="Enviar" class="enviar">
+            </form>    
+        </div>
+    </div>
+    <script src="./validar.js"></script>
+    <script type='text/javascript'>
+        document.oncontextmenu = function(){return false}
+    </script>
+</body>
+</html>

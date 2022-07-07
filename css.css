@@ -1,0 +1,117 @@
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(142deg, rgba(2,0,36,1) 0%, rgba(50,9,121,1) 35%, rgba(170,0,255,1) 100%);
+}
+
+form{
+    max-width: 700px;
+    margin: auto;
+    padding: 50px;
+    
+}
+input{
+    width: 100%;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: solid 1px white;
+    background-color: #24242420;
+    color: white;
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+}
+input:focus{
+    outline: none;
+    margin: 5px 0px;
+    background-color: #24242410;
+    border-bottom: solid 3px white;
+}
+.ddmm{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+}
+.ddmm input{
+    width: 50px;
+}
+.enviar{
+    background-color: rgba(172, 255, 47, 0.484);
+    border: greenyellow;
+    width: 300px;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 400ms;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+}
+.enviar:hover{
+    background-color: rgba(172, 255, 47, 0.536);
+    cursor: pointer;
+    box-shadow: 0 0 18px  rgba(172, 255, 47, 0.536);
+}
+.separacion{
+    margin-bottom: 20px;
+}
+.text-validator {
+    font-style: oblique;
+    font-size: small;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    color: #c9c9c9;
+
+}
+.error{
+    color: rgb(255, 73, 73);
+    text-shadow: 0 0 18px;
+}
+.listo{
+    color: rgb(5, 249, 5);
+    text-shadow: 0 0 18px;
+}
+label{
+    margin-bottom: 15px;
+}
+
+
+#formulario{
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    border: solid 1px rgb(76, 76, 76);
+    background: rgba(0, 0, 0, 0.714);
+    backdrop-filter: blur(20px);
+    margin: auto;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.contenedor{
+    margin: 20px;
+}
+
+@media (min-width: 768px){ 
+    
+    #formulario {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+  
+ }
