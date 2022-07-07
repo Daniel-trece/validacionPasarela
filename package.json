@@ -4,11 +4,9 @@
   "description": "",
   "main": "validar.js",
   "scripts": {
-<<<<<<< HEAD
+
     "start":"node index.js"
-=======
-    "start": "node ./index.js"
->>>>>>> dec7f807f44d67fc757050d72568816f9fb48e8a
+
   },
   "repository": {
     "type": "git",
